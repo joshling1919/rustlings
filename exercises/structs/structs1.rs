@@ -1,8 +1,6 @@
 // structs1.rs
 // Address all the TODOs to make the tests pass!
 
-// I AM NOT DONE
-
 struct ColorClassicStruct {
     name: String,
     hex: String,
@@ -32,7 +30,7 @@ mod tests {
     #[test]
     fn tuple_structs() {
         // TODO: Instantiate a tuple struct!
-        let green = ColorTupleStruct(String::from("green"), String::from("#00F00"));
+        let green = ColorTupleStruct(String::from("green"), String::from("#00FF00"));
 
         assert_eq!(green.0, "green");
         assert_eq!(green.1, "#00FF00");
@@ -41,7 +39,7 @@ mod tests {
     #[test]
     fn unit_structs() {
         // TODO: Instantiate a unit struct!
-        // let unit_struct =
+        let unit_struct = UnitStruct;
         let message = format!("{:?}s are fun!", unit_struct);
 
         assert_eq!(message, "UnitStructs are fun!");
