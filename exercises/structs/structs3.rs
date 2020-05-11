@@ -15,14 +15,17 @@ struct Package {
 impl Package {
     fn new(from: String, to: String, weight: f32) -> Package {
         if weight <= 0.0 {
-            // Something goes here...
+            panic!("weight must be less than 0");
         } else {
             return Package {from, to, weight};
         }
     }
 
-    fn is_international(&self) -> ??? {
-        // Something goes here...
+    fn is_international(&self) -> bool {
+        if self.from != self.to {
+            return true
+        } 
+        false
     }
 
     fn get_fees(&self, cost_per_kg: f32) -> ??? {
